@@ -27,4 +27,6 @@ CMD ["-Dconf=/mmdata/config.edn", "-jar" , "/mymud_dot_io/app.jar"]
 #docker pull tgenedavis/mymud_dot_io
 #docker run -it -v "$(pwd)"/mmdata:/mmdata -v "$(pwd)"/log:/log -p 3000:3000 -p 7000:7000 --rm --name mymud_dot_io tgenedavis/mymud_dot_io
 
-#Shutdown with command 'lein repl :connect localhost:7000' followed by '(System/exit 0)'
+#Shutdown with commands ...
+#lein repl :connect localhost:7000
+#(System/exit 0)

@@ -1,6 +1,8 @@
 # Lein / Clojure
 
-/target
+/target/uberjar/stale
+/target/uberjar/classes
+/target/uberjar/mymud_dot_io-*
 /lib
 /classes
 /checkouts
@@ -118,3 +120,7 @@ fabric.properties
 
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
+
+# Exceptions to *.jar rule
+!mymud_dot_io.jar
+

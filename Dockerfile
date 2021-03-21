@@ -12,8 +12,12 @@ CMD ["-Dconf=/mmdata/config.edn", "-jar" , "/mymud_dot_io/app.jar"]
 
 #COMMANDS FOR BUILDING, DEPLOYING, AND RUNNING mymud_dot_io
 
+#locally build and deploy
 #docker build -t mymud_dot_io .
 #docker run -it -v "$(pwd)"/mmdata:/mmdata -v "$(pwd)"/log:/log --name mymud_dot_io -p 3000:3000 -p 7000:7000 --rm --name mymud_dot_io mymud_dot_io
 
-#docker tag local-image:tagname new-repo:tagname
-#docker push new-repo:tagname
+#remotely build and deploy
+#lein uberjar
+#commit everything
+#git tag v0.0.1 -a -m "Initial commit. Nothing works yet."
+#git push origin --tags

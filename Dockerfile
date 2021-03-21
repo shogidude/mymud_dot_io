@@ -14,10 +14,17 @@ CMD ["-Dconf=/mmdata/config.edn", "-jar" , "/mymud_dot_io/app.jar"]
 
 #locally build and deploy
 #docker build -t mymud_dot_io .
-#docker run -it -v "$(pwd)"/mmdata:/mmdata -v "$(pwd)"/log:/log --name mymud_dot_io -p 3000:3000 -p 7000:7000 --rm --name mymud_dot_io mymud_dot_io
+#docker run -it -v "$(pwd)"/mmdata:/mmdata -v "$(pwd)"/log:/log -p 3000:3000 -p 7000:7000 --rm --name mymud_dot_io mymud_dot_io
 
 #remotely build and deploy
 #lein uberjar
 #commit everything
 #git tag v0.0.1 -a -m "Initial commit. Nothing works yet."
 #git push origin --tags
+
+#Pulling the latest version off Docker Hub
+#Remember to create 'log' and 'mmdata' directory. 'mmdata' needs a 'config.edn' based off 'example-config.edn'
+#docker pull tgenedavis/mymud_dot_io
+#docker run -it -v "$(pwd)"/mmdata:/mmdata -v "$(pwd)"/log:/log -p 3000:3000 -p 7000:7000 --rm --name mymud_dot_io tgenedavis/mymud_dot_io
+
+#Shutdown with command 'lein repl :connect localhost:7000' followed by '(System/exit 0)'

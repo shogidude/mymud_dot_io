@@ -9,12 +9,10 @@ Create 'log' and 'mmdata' directory in the directory you intend to run the Docke
 
 If you have Docker desktop installed, 
 
-`docker pull tgenedavis/mymud_dot_io`
-
+`docker pull tgenedavis/mymud_dot_io`<br/>
 `docker run -it -v "$(pwd)"/mmdata:/mmdata -v "$(pwd)"/log:/log -p 3000:3000 -p 7000:7000 --rm --name mymud_dot_io tgenedavis/mymud_dot_io`
 
 Then to shutdown the server.
 
-`lein repl :connect localhost:7000`
-
+`lein repl :connect localhost:7000`<br/>
 `(System/exit 0)`

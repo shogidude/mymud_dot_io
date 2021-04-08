@@ -1,7 +1,9 @@
 (ns mymud-dot-io.middleware.formats
   (:require
     [luminus-transit.time :as time]
-    [muuntaja.core :as m]))
+    [muuntaja.core :as m]
+    
+    [mymud-dot-io.db.core :as database]))
 
 (def instance
   (m/create

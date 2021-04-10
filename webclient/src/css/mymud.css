@@ -1,0 +1,23 @@
+.mudview {
+  background-color: black;
+  color: rgb(34, 190, 47);
+  padding: 8px;
+  font-family:courier, "courier new", monospace;
+}
+
+.blackbackground {
+  background-color: black;
+  color: white;
+}
+
+.whitetext {
+  color: white;
+}
+
+.bluetext {
+  color: blue;
+}
+
+.greentext {
+  color: rgb(67, 201, 0);
+}
